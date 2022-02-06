@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2RZmsc4TSd/mZJH1iSbSmqyicdp7lrPoWkvkQI2RxGHHVg45oBhueHg2d8jQM83uJykuY+/PjRLN5t5Avjj6Qw==",
+  "dgSpecHash": "qYnPX3QBJhAl9d3gF+MBW3eFBCSzVoLJ4SsJQVIh9vA7bfBvAoyajR8M/ha1JGOTyDi8FqimbdQVC7CXlkn7Xg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\yehor.hrabovskyi\\source\\repos\\EposeaLocalBackend\\EposeaLocalBackend\\EposeaLocalBackend.csproj",
+  "projectFilePath": "D:\\Projects\\eposea\\EposeaLocalBackend\\EposeaLocalBackend\\EposeaLocalBackend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\yehor.hrabovskyi\\.nuget\\packages\\google.protobuf\\3.11.2\\google.protobuf.3.11.2.nupkg.sha512",
     "C:\\Users\\yehor.hrabovskyi\\.nuget\\packages\\grpc.aspnetcore\\2.27.0\\grpc.aspnetcore.2.27.0.nupkg.sha512",

@@ -635,11 +635,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\yehor.hrabovskyi\\source\\repos\\EposeaLocalBackend\\EposeaLocalBackend\\EposeaLocalBackend.csproj",
+      "projectUniqueName": "D:\\Projects\\eposea\\EposeaLocalBackend\\EposeaLocalBackend\\EposeaLocalBackend.csproj",
       "projectName": "EposeaLocalBackend",
-      "projectPath": "C:\\Users\\yehor.hrabovskyi\\source\\repos\\EposeaLocalBackend\\EposeaLocalBackend\\EposeaLocalBackend.csproj",
+      "projectPath": "D:\\Projects\\eposea\\EposeaLocalBackend\\EposeaLocalBackend\\EposeaLocalBackend.csproj",
       "packagesPath": "C:\\Users\\yehor.hrabovskyi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\yehor.hrabovskyi\\source\\repos\\EposeaLocalBackend\\EposeaLocalBackend\\obj\\",
+      "outputPath": "D:\\Projects\\eposea\\EposeaLocalBackend\\EposeaLocalBackend\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

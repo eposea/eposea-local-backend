@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\eposea\\EposeaLocalBackend\\EposeaLocalBackend\\EposeaLocalBackend.csproj": {}
+    "D:\\Projects\\eposea\\EposeaLocalBackend\\EposeaLocalBackend.Core\\EposeaLocalBackend.Core.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\eposea\\EposeaLocalBackend\\EposeaLocalBackend\\EposeaLocalBackend.csproj": {
+    "D:\\Projects\\eposea\\EposeaLocalBackend\\EposeaLocalBackend.Core\\EposeaLocalBackend.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\eposea\\EposeaLocalBackend\\EposeaLocalBackend\\EposeaLocalBackend.csproj",
-        "projectName": "EposeaLocalBackend",
-        "projectPath": "D:\\Projects\\eposea\\EposeaLocalBackend\\EposeaLocalBackend\\EposeaLocalBackend.csproj",
+        "projectUniqueName": "D:\\Projects\\eposea\\EposeaLocalBackend\\EposeaLocalBackend.Core\\EposeaLocalBackend.Core.csproj",
+        "projectName": "EposeaLocalBackend.Core",
+        "projectPath": "D:\\Projects\\eposea\\EposeaLocalBackend\\EposeaLocalBackend.Core\\EposeaLocalBackend.Core.csproj",
         "packagesPath": "C:\\Users\\yehor.hrabovskyi\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\eposea\\EposeaLocalBackend\\EposeaLocalBackend\\obj\\",
+        "outputPath": "D:\\Projects\\eposea\\EposeaLocalBackend\\EposeaLocalBackend.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -43,12 +43,6 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "dependencies": {
-            "Grpc.AspNetCore": {
-              "target": "Package",
-              "version": "[2.27.0, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -60,9 +54,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
