@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace EposeaLocalBackend.Data.Infrastructure
+﻿namespace EposeaLocalBackend.Business.Infrastructure
 {
-    internal interface IRegisterDependency
+    public interface IRegisterDependency
     {
     }
 }

@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "OfvrJmbWxVyw2RX/xG9CKEmcSgEtyyqXpvrBf4BT7/cv/KRc3W6IsABcVGZ1DoqzYP4/FrgR2tJFurQcXmnAeg==",
+  "dgSpecHash": "IZFjkweu0GASBainaNTsV1yg3hUzizsmP6S2yuXR2u81oKoui2BgE/qHSmCXVT1Ji37Gp5VeZ95jRT7ScSqTvA==",
   "success": true,
   "projectFilePath": "D:\\Projects\\eposea\\EposeaLocalBackend\\EposeaLocalBackend.Core\\EposeaLocalBackend.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\yehor.hrabovskyi\\.nuget\\packages\\autofac\\6.3.0\\autofac.6.3.0.nupkg.sha512",
+    "C:\\Users\\yehor.hrabovskyi\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
+    "C:\\Users\\yehor.hrabovskyi\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\yehor.hrabovskyi\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512"
   ],
   "logs": []

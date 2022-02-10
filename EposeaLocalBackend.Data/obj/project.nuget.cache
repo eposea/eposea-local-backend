@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "NJ22QyNvWiGzCcNCLycZnutl1VI++t9VLnn5x6rDQgyrWav8yMjVBZE+PI+UQD6Lpd6EEpXgAFRQs1KStG7J5w==",
+  "dgSpecHash": "fPa6frBpPa0G0uvR+jrFrkUAnHIsGsAyJmjPSeA8VTVFUuof8THHQ9hVeiDcgqq/3IdQ+OnjFoMcXWcjhK0q2g==",
   "success": true,
   "projectFilePath": "D:\\Projects\\eposea\\EposeaLocalBackend\\EposeaLocalBackend.Data\\EposeaLocalBackend.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\yehor.hrabovskyi\\.nuget\\packages\\autofac\\6.3.0\\autofac.6.3.0.nupkg.sha512",
+    "C:\\Users\\yehor.hrabovskyi\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
+    "C:\\Users\\yehor.hrabovskyi\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\yehor.hrabovskyi\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.14\\microsoft.entityframeworkcore.5.0.14.nupkg.sha512",
     "C:\\Users\\yehor.hrabovskyi\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.14\\microsoft.entityframeworkcore.abstractions.5.0.14.nupkg.sha512",
     "C:\\Users\\yehor.hrabovskyi\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\5.0.14\\microsoft.entityframeworkcore.analyzers.5.0.14.nupkg.sha512",

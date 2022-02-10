@@ -4,7 +4,7 @@ using System.Text;
 
 namespace EposeaLocalBackend.Data.Infrastructure
 {
-    internal interface IRegisterDependency
+    public interface IRegisterDependency
     {
     }
 }
