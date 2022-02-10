@@ -1,0 +1,44 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "EposeaLocalBackend.gRPC.Course";
+
+package course;
+
+service Courser {
+ rpc GetCourses(GetCoursesRequest) returns (stream CourseDto);
+}
+ 
+message Course {
+    int32 id = 1;
+    string title = 2;
+    string description = 3;
+    repeated Item items = 4;
+}
+
+message Item {
+    int32 id = 1;
+}
+message ItemUpdate {
+    int32 id = 1;
+}
+message AddCourseDto{
+    int32 id = 1;
+    string title = 2;
+    string description = 3;
+}
+message UpdateCourseDto{
+    int32 id = 1;
+    string title = 2;
+    string description = 3;
+}
+message GetCoursesRequest {
+    int32 id = 1;
+    string title = 2;
+    string description = 3;
+}
+message CourseDto {
+    int32 d = 1;
+    string title = 2;
+    string description = 3;
+    repeated Item items = 4;
+}

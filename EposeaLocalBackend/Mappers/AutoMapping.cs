@@ -1,16 +1,13 @@
 ﻿using AutoMapper;
-using EposeaLocalBackend.Data.Models.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using EposeaLocalBackend.gRPC.Course;
 
-namespace EposeaLocalBackend.Core.AutoMapper
+namespace EposeaLocalBackend.API.Mappers
 {
     public class AutoMapping : Profile
     {
         public AutoMapping()
         {
-            CreateMap<Course, GetCourseResponce>
+            CreateMap<Course, CourseDto>();
         }
     }
 }

@@ -18,6 +18,11 @@
 
   <ItemGroup>
     <PackageReference Include="Autofac" Version="6.3.0" />
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EposeaLocalBackend.gRPC\EposeaLocalBackend.gRPC.csproj" />
   </ItemGroup>
 
 </Project>

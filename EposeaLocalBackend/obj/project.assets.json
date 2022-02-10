@@ -489,6 +489,8 @@
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "11.0.0",
           "Autofac": "6.3.0",
           "EposeaLocalBackend.Core": "1.0.0",
+          "EposeaLocalBackend.Data": "1.0.0",
+          "EposeaLocalBackend.gRPC": "1.0.0",
           "Microsoft.Extensions.Hosting.Abstractions": "6.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "6.0.0"
         },
@@ -504,7 +506,8 @@
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
           "AutoMapper": "11.0.1",
-          "Autofac": "6.3.0"
+          "Autofac": "6.3.0",
+          "EposeaLocalBackend.gRPC": "1.0.0"
         },
         "compile": {
           "bin/placeholder/EposeaLocalBackend.Core.dll": {}
@@ -520,6 +523,7 @@
           "AutoMapper": "11.0.1",
           "Autofac": "6.3.0",
           "EposeaLocalBackend.Core": "1.0.0",
+          "EposeaLocalBackend.gRPC": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.14",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "5.0.10"
         },
@@ -528,6 +532,19 @@
         },
         "runtime": {
           "bin/placeholder/EposeaLocalBackend.Data.dll": {}
+        }
+      },
+      "EposeaLocalBackend.gRPC/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Grpc.AspNetCore": "2.27.0"
+        },
+        "compile": {
+          "bin/placeholder/EposeaLocalBackend.gRPC.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EposeaLocalBackend.gRPC.dll": {}
         }
       }
     }
@@ -1461,6 +1478,11 @@
       "type": "project",
       "path": "../EposeaLocalBackend.Data/EposeaLocalBackend.Data.csproj",
       "msbuildProject": "../EposeaLocalBackend.Data/EposeaLocalBackend.Data.csproj"
+    },
+    "EposeaLocalBackend.gRPC/1.0.0": {
+      "type": "project",
+      "path": "../EposeaLocalBackend.gRPC/EposeaLocalBackend.gRPC.csproj",
+      "msbuildProject": "../EposeaLocalBackend.gRPC/EposeaLocalBackend.gRPC.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1471,6 +1493,7 @@
       "Autofac.Extensions.DependencyInjection >= 7.2.0",
       "EposeaLocalBackend.Business >= 1.0.0",
       "EposeaLocalBackend.Data >= 1.0.0",
+      "EposeaLocalBackend.gRPC >= 1.0.0",
       "Grpc.AspNetCore >= 2.27.0"
     ]
   },
@@ -1511,6 +1534,9 @@
             },
             "D:\\Projects\\eposea\\EposeaLocalBackend\\EposeaLocalBackend.Data\\EposeaLocalBackend.Data.csproj": {
               "projectPath": "D:\\Projects\\eposea\\EposeaLocalBackend\\EposeaLocalBackend.Data\\EposeaLocalBackend.Data.csproj"
+            },
+            "D:\\Projects\\eposea\\EposeaLocalBackend\\EposeaLocalBackend.gRPC\\EposeaLocalBackend.gRPC.csproj": {
+              "projectPath": "D:\\Projects\\eposea\\EposeaLocalBackend\\EposeaLocalBackend.gRPC\\EposeaLocalBackend.gRPC.csproj"
             }
           }
         }

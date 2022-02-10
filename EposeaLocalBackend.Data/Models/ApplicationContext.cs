@@ -1,4 +1,4 @@
-﻿using EposeaLocalBackend.Data.Models.Models;
+﻿using EposeaLocalBackend.gRPC.Course;
 using Microsoft.EntityFrameworkCore;
 
 namespace EposeaLocalBackend.Data.Models

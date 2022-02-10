@@ -1,5 +1,8 @@
-﻿using EposeaLocalBackend.Data.Models;
+﻿using EposeaLocalBackend.Core.Interfaces.Managers;
+using EposeaLocalBackend.Data.Models;
+using EposeaLocalBackend.gRPC.Course;
 using Grpc.Core;
+using System;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -7,15 +10,20 @@ namespace EposeaLocalBackend
 {
     public class CourseService : Courser.CourserBase
     {
-        private readonly ApplicationContext applicationContext;
-        public CourseService(ApplicationContext applicationContext)
+        private readonly ICourseManager courseManager;
+        public CourseService(ICourseManager courseManager)
         {
-            this.applicationContext = applicationContext;
+            this.courseManager = courseManager;
         }
-        public override Task GetCourse(GetCourseRequest request, IServerStreamWriter<GetCourseResponce> responseStream, ServerCallContext context)
+
+        public override async Task GetCourses(GetCoursesRequest request, IServerStreamWriter<CourseDto> responseStream, ServerCallContext context)
         {
-            var result = applicationContext.Course.Where(item => item.Id == request.Id);
-            return Task.FromResult(result);
+            var result = courseManager.GetCourses(request).GetEnumerator();
+            while (!context.CancellationToken.IsCancellationRequested && result.MoveNext())
+            {
+                await responseStream.WriteAsync(result.Current);
+                await Task.Delay(TimeSpan.FromSeconds(1), context.CancellationToken);
+            }
         }
     }
 }

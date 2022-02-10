@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace EposeaLocalBackend.Data.Repository
 {
-    public class Repository<TEntity> : IRepository<TEntity>, ISingletonService where TEntity : class, new()
+    public class Repository<TEntity> : IRepository<TEntity> where TEntity : class, new()
     {
         protected readonly ApplicationContext applicationContext;
 
