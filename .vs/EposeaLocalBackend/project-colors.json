@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "d3c5c0ad-1f13-4c24-91fc-f6a7282ab13c": {
+      "ProjectGuid": "d3c5c0ad-1f13-4c24-91fc-f6a7282ab13c",
+      "DisplayName": "EposeaLocalBackend",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

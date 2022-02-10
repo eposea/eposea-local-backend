@@ -1,15 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31624.102
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EposeaLocalBackend", "EposeaLocalBackend\EposeaLocalBackend.csproj", "{D3C5C0AD-1F13-4C24-91FC-F6A7282AB13C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EposeaLocalBackend.API", "EposeaLocalBackend\EposeaLocalBackend.API.csproj", "{D3C5C0AD-1F13-4C24-91FC-F6A7282AB13C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EposeaLocalBackend.Data", "EposeaLocalBackend.Data\EposeaLocalBackend.Data.csproj", "{4AC5AD51-B934-4848-951D-AA72BB546FC2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EposeaLocalBackend.Core", "EposeaLocalBackend.Core\EposeaLocalBackend.Core.csproj", "{7254B704-E3A9-43EA-A4D5-319790601D50}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EposeaLocalBackend.Core", "EposeaLocalBackend.Core\EposeaLocalBackend.Core.csproj", "{7254B704-E3A9-43EA-A4D5-319790601D50}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EposeaLocalBackend.Business", "EposeaLocalBackend.Business\EposeaLocalBackend.Business.csproj", "{94BFCFEF-9E4D-4594-808F-B22FB43DFB40}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EposeaLocalBackend.Business", "EposeaLocalBackend.Business\EposeaLocalBackend.Business.csproj", "{94BFCFEF-9E4D-4594-808F-B22FB43DFB40}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{E463DCF6-A4C1-438F-9D5B-BB83F9A4A9B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,6 +38,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4AC5AD51-B934-4848-951D-AA72BB546FC2} = {E463DCF6-A4C1-438F-9D5B-BB83F9A4A9B8}
+		{7254B704-E3A9-43EA-A4D5-319790601D50} = {E463DCF6-A4C1-438F-9D5B-BB83F9A4A9B8}
+		{94BFCFEF-9E4D-4594-808F-B22FB43DFB40} = {E463DCF6-A4C1-438F-9D5B-BB83F9A4A9B8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {71CFC106-1D1A-4903-BEE8-FADE3FE5E401}
