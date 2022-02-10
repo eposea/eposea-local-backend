@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
+      "Autofac/6.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Diagnostics.DiagnosticSource": "4.7.1"
+        },
+        "compile": {
+          "lib/netstandard2.1/Autofac.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Autofac.dll": {}
+        }
+      },
       "Microsoft.EntityFrameworkCore/5.0.14": {
         "type": "package",
         "dependencies": {
@@ -222,10 +234,44 @@
         "runtime": {
           "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         }
+      },
+      "EposeaLocalBackend.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Autofac": "6.3.0"
+        },
+        "compile": {
+          "bin/placeholder/EposeaLocalBackend.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EposeaLocalBackend.Core.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "Autofac/6.3.0": {
+      "sha512": "gO4bli0N8tDnBHzbYktcnbXlmN6T+IT5W+FUGgCUaM6pwwHXIxOPoUGvfGum7sZpJJgfQNgjFFv80ZPuARgRdA==",
+      "type": "package",
+      "path": "autofac/6.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "autofac.6.3.0.nupkg.sha512",
+        "autofac.nuspec",
+        "icon.png",
+        "lib/net5.0/Autofac.dll",
+        "lib/net5.0/Autofac.pdb",
+        "lib/net5.0/Autofac.xml",
+        "lib/netstandard2.0/Autofac.dll",
+        "lib/netstandard2.0/Autofac.pdb",
+        "lib/netstandard2.0/Autofac.xml",
+        "lib/netstandard2.1/Autofac.dll",
+        "lib/netstandard2.1/Autofac.pdb",
+        "lib/netstandard2.1/Autofac.xml"
+      ]
+    },
     "Microsoft.EntityFrameworkCore/5.0.14": {
       "sha512": "WP23yZ6WDKcLt+ddQCx1728JTHf+Yds9V8heMMY7VjlwGqTMxOYBGnaJ4KkSu/x7pBHGd6I9Vg70YBqUmjGVjg==",
       "type": "package",
@@ -673,10 +719,17 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "EposeaLocalBackend.Core/1.0.0": {
+      "type": "project",
+      "path": "../EposeaLocalBackend.Core/EposeaLocalBackend.Core.csproj",
+      "msbuildProject": "../EposeaLocalBackend.Core/EposeaLocalBackend.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "Autofac >= 6.3.0",
+      "EposeaLocalBackend.Core >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 5.0.14",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 5.0.10"
     ]
@@ -712,7 +765,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Projects\\eposea\\EposeaLocalBackend\\EposeaLocalBackend.Core\\EposeaLocalBackend.Core.csproj": {
+              "projectPath": "D:\\Projects\\eposea\\EposeaLocalBackend\\EposeaLocalBackend.Core\\EposeaLocalBackend.Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -725,6 +782,10 @@
       "netcoreapp3.1": {
         "targetAlias": "netcoreapp3.1",
         "dependencies": {
+          "Autofac": {
+            "target": "Package",
+            "version": "[6.3.0, )"
+          },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[5.0.14, )"

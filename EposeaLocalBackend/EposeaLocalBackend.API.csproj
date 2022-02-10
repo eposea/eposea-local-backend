@@ -5,15 +5,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-	  <Protobuf Include="Protos\greet.proto" GrpcServices="Server" OutputFolder="GrpcImplementations" />
 	  <Protobuf Include="Protos\course.proto" GrpcServices="Server" OutputFolder="GrpcImplementations" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.3.0" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.2.0" />
     <PackageReference Include="Grpc.AspNetCore" Version="2.27.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\EposeaLocalBackend.Business\EposeaLocalBackend.Business.csproj" />
     <ProjectReference Include="..\EposeaLocalBackend.Data\EposeaLocalBackend.Data.csproj" />
   </ItemGroup>
 
