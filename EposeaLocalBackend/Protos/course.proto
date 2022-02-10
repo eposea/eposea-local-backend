@@ -1,0 +1,31 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "EposeaLocalBackend";
+
+package course;
+
+service Courser {
+ rpc GetCourse(GetCourseRequest) returns (stream GetCourseResponce);
+}
+
+message Course {
+    int32 id = 1;
+    string title = 2;
+    string description = 3;
+    repeated Item item = 4;
+}
+
+message Item {
+    int32 id = 1;
+}
+message GetCourseRequest {
+    int32 id = 1;
+    string title = 2;
+    string description = 3;
+}
+message GetCourseResponce {
+    int32 id = 1;
+    string title = 2;
+    string description = 3;
+    repeated Item item = 4;
+}

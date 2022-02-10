@@ -23,11 +23,11 @@ namespace EposeaLocalBackend
 
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
-        public void ConfigureServices(IServiceCollection services)
-        {
+        public void ConfigureServices(IServiceCollection services) 
+        { 
             services.AddGrpc();
             services.AddDbContext<ApplicationContext>(options =>
-                options.UseNpgsql(Configuration.GetConnectionString("BloggingContext")));
+                options.UseNpgsql(Configuration.GetConnectionString("BloggingDatabase")));
 
         }
 
@@ -43,7 +43,7 @@ namespace EposeaLocalBackend
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGrpcService<GreeterService>();
+                endpoints.MapGrpcService<CourseService>();
 
                 endpoints.MapGet("/", async context =>
                 {
