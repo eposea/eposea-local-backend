@@ -31,4 +31,4 @@ msbuild.wrn
 .vs/
 .idea/
 
-.EposeaLocalBackend.gRPC/Course
+EposeaLocalBackend.gRPC/Course

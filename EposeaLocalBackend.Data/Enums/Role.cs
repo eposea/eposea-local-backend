@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace EposeaLocalBackend.Data.Models.Enums
+namespace EposeaLocalBackend.Data.Enums
 {
-    internal class Role
+    public enum Role
     {
+
     }
 }
