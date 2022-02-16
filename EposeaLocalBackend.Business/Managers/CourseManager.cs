@@ -1,9 +1,7 @@
 ﻿using AutoMapper;
 using EposeaLocalBackend.Core.Interfaces.Managers;
 using EposeaLocalBackend.Core.Interfaces.Repositories;
-using EposeaLocalBackend.gRPC.Course;
-using System;
-using System.Collections.Generic;
+using EposeaLocalBackend.gRPC.Proto.Course;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -11,29 +9,28 @@ namespace EposeaLocalBackend.Business.Managers
 {
     public class CourseManager : ICourseManager
     {
-        private readonly IRepository<Course> courseRepository;
+        private readonly ICourseRepository courseRepository;
         private readonly IMapper mapper;
-        public CourseManager(ICourseRepository repository, IMapper mapper)
+        public CourseManager(ICourseRepository courseRepository, IMapper mapper)
         {
-            courseRepository = repository;
+            this.courseRepository = courseRepository;
             this.mapper = mapper;
         }
 
-        public async Task<CourseDto> AddAsync(Course entity)
+        public async Task<Course> AddAsync(Course entity)
         {
             var result = await courseRepository.AddAsync(entity);
 
-            return mapper.Map<CourseDto>(result);
+            return result;
         }
 
-        public IQueryable<CourseDto> GetCourses(GetCoursesRequest request)
+        public Course GetCourse(GetCourseRequest request)
         {
-            return courseRepository.GetAll().Select(item => mapper.Map<CourseDto>(item));
+            return courseRepository.GetAll().FirstOrDefault(item => item.Id == request.Id);
         }
 
-        public async Task<CourseDto> UpdateAsync(Course entity)
+        public Course Update(Course entity)
         {
-
             return null;
         }
     }

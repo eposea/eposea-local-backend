@@ -1,5 +1,5 @@
 ﻿using EposeaLocalBackend.Core.Interfaces.Infrastructure;
-using EposeaLocalBackend.gRPC.Course;
+using EposeaLocalBackend.gRPC.Proto.Course;
 using System.Linq;
 
 namespace EposeaLocalBackend.Core.Interfaces.Managers
@@ -7,7 +7,7 @@ namespace EposeaLocalBackend.Core.Interfaces.Managers
     public interface ICourseManager : ITransientService
     {
 
-        public IQueryable<CourseDto> GetCourses(GetCoursesRequest request);
+        public Course GetCourse(GetCourseRequest request);
 
     }
 }

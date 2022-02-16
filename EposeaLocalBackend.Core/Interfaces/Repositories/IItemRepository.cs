@@ -1,9 +1,9 @@
 ﻿using EposeaLocalBackend.Core.Interfaces.Infrastructure;
-using EposeaLocalBackend.gRPC.Proto.Course;
+using EposeaLocalBackend.gRPC.Proto.Item;
 
 namespace EposeaLocalBackend.Core.Interfaces.Repositories
 {
-    public interface ICourseRepository : ITransientService, IRepository<Course>
+    public interface IItemRepository : ITransientService, IRepository<Item>
     {
     }
 }

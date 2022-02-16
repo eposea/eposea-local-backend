@@ -1,6 +1,6 @@
 ﻿using EposeaLocalBackend.Core.Interfaces.Repositories;
 using EposeaLocalBackend.Data.Models;
-using EposeaLocalBackend.gRPC.Course;
+using EposeaLocalBackend.gRPC.Proto.Course;
 
 namespace EposeaLocalBackend.Data.Repository.Repositories
 {

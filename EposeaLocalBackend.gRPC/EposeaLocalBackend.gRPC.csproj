@@ -1,17 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 	<ItemGroup>
-		<None Remove="Protos\course.proto" />
-	</ItemGroup>
-	<ItemGroup>
-		<Protobuf Include="Protos\course.proto" OutputDir="./Course" GrpcServices="Server" />
+		<Protobuf Include="backend-common\proto\section.proto" OutputDir="./Generated/Section" GrpcServices="Server" ProtoRoot="backend-common\proto\" />
+		<Protobuf Include="backend-common\proto\course.proto" OutputDir="./Generated/Course" GrpcServices="Server" ProtoRoot="backend-common\proto\" />
+		<Protobuf Include="backend-common\proto\item.proto" OutputDir="./Generated/Item" GrpcServices="Server" ProtoRoot="backend-common\proto\" />
+		<Protobuf Include="backend-common\proto\institution.proto" OutputDir="./Generated/Institution" GrpcServices="Server" ProtoRoot="backend-common\proto\" />
 	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="Grpc.AspNetCore" Version="2.27.0" />
 	</ItemGroup>
-
-
+	<ItemGroup>
+	  <Folder Include="Generated\" />
+	</ItemGroup>
 </Project>

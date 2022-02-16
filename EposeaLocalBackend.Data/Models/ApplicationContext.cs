@@ -1,4 +1,5 @@
-﻿using EposeaLocalBackend.gRPC.Course;
+﻿using EposeaLocalBackend.gRPC.Proto.Course;
+using EposeaLocalBackend.gRPC.Proto.Item;
 using Microsoft.EntityFrameworkCore;
 
 namespace EposeaLocalBackend.Data.Models

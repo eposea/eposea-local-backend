@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using EposeaLocalBackend.gRPC.Course;
+using EposeaLocalBackend.gRPC.Proto.Course;
 
 namespace EposeaLocalBackend.API.Mappers
 {
@@ -7,7 +7,6 @@ namespace EposeaLocalBackend.API.Mappers
     {
         public AutoMapping()
         {
-            CreateMap<Course, CourseDto>();
         }
     }
 }
