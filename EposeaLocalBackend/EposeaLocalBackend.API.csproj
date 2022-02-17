@@ -17,6 +17,7 @@
     <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.2.0" />
     <PackageReference Include="AutoMapper" Version="11.0.1" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+    <PackageReference Include="EFCore.NamingConventions" Version="5.0.2" />
     <PackageReference Include="Grpc.AspNetCore" Version="2.27.0" />
     <PackageReference Include="Grpc.AspNetCore.Server.Reflection" Version="2.42.0" />
     <PackageReference Include="Grpc.AspNetCore.Web" Version="2.42.0" />

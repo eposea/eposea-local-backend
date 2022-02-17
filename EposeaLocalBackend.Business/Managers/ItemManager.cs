@@ -2,10 +2,7 @@
 using EposeaLocalBackend.Core.Interfaces.Managers;
 using EposeaLocalBackend.Core.Interfaces.Repositories;
 using EposeaLocalBackend.gRPC.Proto.Item;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace EposeaLocalBackend.Business.Managers
@@ -29,7 +26,8 @@ namespace EposeaLocalBackend.Business.Managers
 
         public Item GetItem(GetItemRequest request)
         {
-            return itemRepository.GetAll().FirstOrDefault(item => item.Id == request.Id);
+            var items = itemRepository.GetAll();
+            return items.FirstOrDefault(item => item.Id == request.Id);
         }
 
         public Item Update(Item entity)
