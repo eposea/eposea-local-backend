@@ -1,6 +1,5 @@
 ﻿using EposeaLocalBackend.Core.Interfaces.Infrastructure;
 using EposeaLocalBackend.gRPC.Proto.Section;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace EposeaLocalBackend.Core.Interfaces.Managers

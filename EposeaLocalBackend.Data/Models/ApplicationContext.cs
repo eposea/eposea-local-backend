@@ -2,7 +2,6 @@
 using EposeaLocalBackend.gRPC.Proto.Item;
 using EposeaLocalBackend.gRPC.Proto.Section;
 using Microsoft.EntityFrameworkCore;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EposeaLocalBackend.Data.Models
 {

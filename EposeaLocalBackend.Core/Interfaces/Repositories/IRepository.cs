@@ -1,5 +1,4 @@
-﻿using EposeaLocalBackend.Core.Interfaces.Infrastructure;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
 
 namespace EposeaLocalBackend.Core.Interfaces.Repositories
