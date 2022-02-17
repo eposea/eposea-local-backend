@@ -1,3 +1,4 @@
 [submodule "EposeaLocalBackend.gRPC/backend-common"]
 	path = EposeaLocalBackend.gRPC/backend-common
 	url = https://github.com/eposea/backend-common.git
+	branch = develop
