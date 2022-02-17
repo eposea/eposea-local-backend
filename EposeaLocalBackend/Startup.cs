@@ -48,8 +48,12 @@ namespace EposeaLocalBackend
             {
                 endpoints.MapGrpcService<CourseService>()
                          .EnableGrpcWeb(); ;
+
                 endpoints.MapGrpcService<ItemService>()
                          .EnableGrpcWeb();
+
+                endpoints.MapGrpcService<SectionService>()
+                        .EnableGrpcWeb();
 
                 if (env.IsDevelopment())
                 {
