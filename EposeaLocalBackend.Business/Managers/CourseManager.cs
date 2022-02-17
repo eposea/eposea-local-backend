@@ -17,21 +17,34 @@ namespace EposeaLocalBackend.Business.Managers
             this.mapper = mapper;
         }
 
-        public async Task<Course> AddAsync(Course entity)
+
+        public async Task<Course> CreateCourseAsync(Course course)
         {
-            var result = await courseRepository.AddAsync(entity);
+            var result = await courseRepository.AddAsync(course);
 
             return result;
         }
 
-        public Course GetCourse(CourseFilter request)
+        public Course GetCourse(CourseFilter filter)
         {
-            return courseRepository.GetAll().FirstOrDefault(item => item.Id == request.Id);
+            var courses = courseRepository.GetAll();
+            return courses.FirstOrDefault(course => course.Id == filter.Id);
         }
 
-        public Course Update(Course entity)
+
+        public async Task DeleteCourseAsync(CourseFilter filter)
         {
-            return null;
+            var courseToDelete = GetCourse(filter);
+
+            await courseRepository.DeleteAsync(courseToDelete);
+        }
+
+
+        public async Task<Course> UpdateCourseAsync(Course course)
+        {
+            var result = await courseRepository.UpdateAsync(course);
+
+            return result;
         }
     }
 }
