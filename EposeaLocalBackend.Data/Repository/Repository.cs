@@ -24,7 +24,7 @@ namespace EposeaLocalBackend.Data.Repository
             catch (Exception ex)
             {
                 Console.WriteLine(ex.InnerException.Message);
-                throw ex;
+                throw;
             }
         }
 
@@ -46,7 +46,7 @@ namespace EposeaLocalBackend.Data.Repository
             catch (Exception ex)
             {
                 Console.WriteLine(ex.InnerException.Message);
-                throw ex;
+                throw;
             }
         }
 
@@ -67,7 +67,7 @@ namespace EposeaLocalBackend.Data.Repository
             catch (Exception ex)
             {
                 Console.WriteLine(ex.InnerException.Message);
-                throw ex;
+                throw;
             }
         }
 
@@ -82,7 +82,7 @@ namespace EposeaLocalBackend.Data.Repository
             catch (Exception ex)
             {
                 Console.WriteLine(ex.InnerException.Message);
-                throw ex;
+                throw;
             }
         }
     }
