@@ -1,5 +1,4 @@
-﻿using EposeaLocalBackend.Core.Interfaces.Infrastructure;
-using EposeaLocalBackend.Core.Interfaces.Repositories;
+﻿using EposeaLocalBackend.Core.Interfaces.Repositories;
 using EposeaLocalBackend.Data.Models;
 using System;
 using System.Linq;
@@ -24,7 +23,8 @@ namespace EposeaLocalBackend.Data.Repository
             }
             catch (Exception ex)
             {
-                throw new Exception($"Couldn't retrieve entities: {ex.Message}");
+                Console.WriteLine(ex.InnerException.Message);
+                throw ex;
             }
         }
 
@@ -46,7 +46,7 @@ namespace EposeaLocalBackend.Data.Repository
             catch (Exception ex)
             {
                 Console.WriteLine(ex.InnerException.Message);
-                throw new Exception($"{nameof(entity)} could not be saved: {ex.Message}");
+                throw ex;
             }
         }
 
@@ -66,7 +66,8 @@ namespace EposeaLocalBackend.Data.Repository
             }
             catch (Exception ex)
             {
-                throw new Exception($"{nameof(entity)} could not be updated: {ex.Message}");
+                Console.WriteLine(ex.InnerException.Message);
+                throw ex;
             }
         }
 
@@ -80,7 +81,8 @@ namespace EposeaLocalBackend.Data.Repository
             }
             catch (Exception ex)
             {
-                throw new Exception($"{nameof(entity)} could not be deleted: {ex.Message}");
+                Console.WriteLine(ex.InnerException.Message);
+                throw ex;
             }
         }
     }

@@ -1,9 +1,7 @@
 ﻿using Autofac;
 using Autofac.Builder;
 using EposeaLocalBackend.API.Helpers;
-using EposeaLocalBackend.Business.LongRunning;
 using EposeaLocalBackend.Core.Interfaces.Infrastructure;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -15,26 +13,6 @@ namespace EposeaLocalBackend.API.Extensions
 {
     public static class ServiceCollectionExtensions
     {
-        public static IServiceCollection UseAllOfType<T>(this IServiceCollection serviceCollection, ServiceLifetime lifetime = ServiceLifetime.Scoped)
-        {
-            return serviceCollection.UseAllOfType<T>(AssemblyHelper.GetSolutionAssemblies());
-        }
-
-        public static IServiceCollection UseAllOfType<T>(this IServiceCollection serviceCollection, Assembly[] assemblies, ServiceLifetime lifetime = ServiceLifetime.Scoped)
-        {
-            var typesFromAssemblies = assemblies.SelectMany(a => a.DefinedTypes.Where(x => x.IsClass && x.GetInterfaces().Contains(typeof(T))));
-
-            foreach (var type in typesFromAssemblies)
-            {
-                var it = type.GetInterfaces();
-                var ind = Array.IndexOf(it, typeof(T)) - 1;
-
-                serviceCollection.Add(new ServiceDescriptor(type.GetInterfaces()[ind], type, lifetime));
-            }
-
-            return serviceCollection;
-        }
-
         public static ContainerBuilder RegisterAllServices(this ContainerBuilder containerBuilder)
         {
             containerBuilder.UseAllOfType<ISingletonService>(ServiceLifetime.Singleton);
@@ -63,8 +41,8 @@ namespace EposeaLocalBackend.API.Extensions
 
             return serviceCollection;
         }
-        public static IRegistrationBuilder<object,ConcreteReflectionActivatorData,SingleRegistrationStyle>
-            UseLifetime(this IRegistrationBuilder<object,ConcreteReflectionActivatorData,SingleRegistrationStyle> regBuilder,ServiceLifetime lifetime)
+        public static IRegistrationBuilder<object, ConcreteReflectionActivatorData, SingleRegistrationStyle>
+            UseLifetime(this IRegistrationBuilder<object, ConcreteReflectionActivatorData, SingleRegistrationStyle> regBuilder, ServiceLifetime lifetime)
         {
             return lifetime switch
             {
@@ -73,19 +51,6 @@ namespace EposeaLocalBackend.API.Extensions
                 ServiceLifetime.Transient => regBuilder.InstancePerDependency(),
                 _ => regBuilder.InstancePerDependency(),
             };
-        }
-        
-      
-
-      
-
-        public static IServiceCollection AddLongRunningTasks(this IServiceCollection serviceCollection)
-        {
-            serviceCollection.AddHostedService<QueuedHostedService>();
-            serviceCollection.AddSingleton<IBackgroundTaskQueue, BackgroundTaskQueue>();
-            serviceCollection.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-
-            return serviceCollection;
         }
 
         public static IServiceCollection DisableCachingForAllHttpCalls(this IServiceCollection serviceCollection)
