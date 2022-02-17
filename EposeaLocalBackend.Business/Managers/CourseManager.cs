@@ -24,7 +24,7 @@ namespace EposeaLocalBackend.Business.Managers
             return result;
         }
 
-        public Course GetCourse(GetCourseRequest request)
+        public Course GetCourse(CourseFilter request)
         {
             return courseRepository.GetAll().FirstOrDefault(item => item.Id == request.Id);
         }

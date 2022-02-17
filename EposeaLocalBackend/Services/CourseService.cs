@@ -12,7 +12,7 @@ namespace EposeaLocalBackend
         {
             this.courseManager = courseManager;
         }
-        public override Task<Course> GetCourse(GetCourseRequest request, ServerCallContext context)
+        public override Task<Course> GetCourse(CourseFilter request, ServerCallContext context)
         {
             return Task.FromResult(courseManager.GetCourse(request));
         }

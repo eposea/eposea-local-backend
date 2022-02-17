@@ -7,7 +7,7 @@ namespace EposeaLocalBackend.Core.Interfaces.Managers
     public interface ICourseManager : ITransientService
     {
 
-        public Course GetCourse(GetCourseRequest request);
+        public Course GetCourse(CourseFilter request);
 
     }
 }

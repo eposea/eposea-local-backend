@@ -69,5 +69,19 @@ namespace EposeaLocalBackend.Data.Repository
                 throw new Exception($"{nameof(entity)} could not be updated: {ex.Message}");
             }
         }
+
+        public async Task DeleteAsync(TEntity entity)
+        {
+            try
+            {
+                applicationContext.Remove(entity);
+                await applicationContext.SaveChangesAsync();
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"{nameof(entity)} could not be deleted: {ex.Message}");
+            }
+        }
     }
 }

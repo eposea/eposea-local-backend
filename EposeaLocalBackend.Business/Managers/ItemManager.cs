@@ -17,22 +17,32 @@ namespace EposeaLocalBackend.Business.Managers
             this.mapper = mapper;
         }
 
-        public async Task<Item> AddAsync(Item entity)
+        public async Task<Item> CreateItemAsync(Item item)
         {
-            var result = await itemRepository.AddAsync(entity);
+            var result = await itemRepository.AddAsync(item);
 
             return result;
         }
-
-        public Item GetItem(GetItemRequest request)
+        public Item GetItem(ItemFilter filter)
         {
             var items = itemRepository.GetAll();
-            return items.FirstOrDefault(item => item.Id == request.Id);
+            return items.FirstOrDefault(item => item.Id == filter.Id);
         }
 
-        public Item Update(Item entity)
+
+        public async Task DeleteItemAsync(ItemFilter filter)
         {
-            return null;
+            var itemToDelete = GetItem(filter);
+
+            await itemRepository.DeleteAsync(itemToDelete);
+        }
+
+
+        public async Task<Item> UpdateItemAsync(Item item)
+        {
+            var result = await itemRepository.UpdateAsync(item);
+
+            return result;
         }
     }
 }
