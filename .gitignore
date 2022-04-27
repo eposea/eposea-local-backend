@@ -30,3 +30,5 @@ msbuild.wrn
 
 .vs/
 .idea/
+
+EposeaLocalBackend.gRPC/Generated

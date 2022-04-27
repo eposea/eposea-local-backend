@@ -4,4 +4,19 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.3.0" />
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EposeaLocalBackend.Core\EposeaLocalBackend.Core.csproj" />
+    <ProjectReference Include="..\EposeaLocalBackend.Data\EposeaLocalBackend.Data.csproj" />
+    <ProjectReference Include="..\EposeaLocalBackend.gRPC\EposeaLocalBackend.gRPC.csproj" />
+  </ItemGroup>
+
 </Project>
