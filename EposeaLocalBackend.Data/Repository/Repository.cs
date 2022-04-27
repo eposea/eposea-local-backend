@@ -21,8 +21,9 @@ namespace EposeaLocalBackend.Data.Repository
             {
                 return applicationContext.Set<TEntity>();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Console.WriteLine(ex.InnerException.Message);
                 throw;
             }
         }
@@ -42,8 +43,9 @@ namespace EposeaLocalBackend.Data.Repository
 
                 return entity;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Console.WriteLine(ex.InnerException.Message);
                 throw;
             }
         }
@@ -62,7 +64,7 @@ namespace EposeaLocalBackend.Data.Repository
 
                 return entity;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 throw;
             }
@@ -76,8 +78,9 @@ namespace EposeaLocalBackend.Data.Repository
                 await applicationContext.SaveChangesAsync();
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Console.WriteLine(ex.InnerException.Message);
                 throw;
             }
         }
