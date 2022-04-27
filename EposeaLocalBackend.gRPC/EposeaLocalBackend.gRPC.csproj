@@ -1,6 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <LangVersion>8</LangVersion>
   </PropertyGroup>
 	<ItemGroup>
 		<Protobuf Include="backend-common\proto\section.proto" OutputDir="./Generated/Section" GrpcServices="Server" ProtoRoot="backend-common\proto\" />

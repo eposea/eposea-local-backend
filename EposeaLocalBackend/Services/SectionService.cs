@@ -13,23 +13,10 @@ namespace EposeaLocalBackend
         {
             this.sectionManager = sectionManager;
         }
-        public override Task<Section> CreateSection(Section request, ServerCallContext context)
-        {
-            return sectionManager.CreateSectionAsync(request);
-        }
-        public override Task<Section> GetSection(SectionFilter request, ServerCallContext context)
+        public override Task<Section> GetSection(GetSectionRequest request, ServerCallContext context)
         {
             return Task.FromResult(sectionManager.GetSection(request));
         }
-        public override async Task<Section> UpdateSection(Section request, ServerCallContext context)
-        {
-            return await sectionManager.UpdateSectionAsync(request);
-        }
-        public override async Task<Empty> RemoveSection(SectionFilter request, ServerCallContext context)
-        {
-            await sectionManager.DeleteSectionAsync(request);
 
-            return new Empty();
-        }
     }
 }

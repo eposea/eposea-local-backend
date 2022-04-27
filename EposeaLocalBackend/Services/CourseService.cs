@@ -13,23 +13,10 @@ namespace EposeaLocalBackend
         {
             this.courseManager = courseManager;
         }
-        public override Task<Course> CreateCourse(Course request, ServerCallContext context)
-        {
-            return courseManager.CreateCourseAsync(request);
-        }
-        public override Task<Course> GetCourse(CourseFilter request, ServerCallContext context)
+
+        public override Task<Course> GetCourse(GetCourseRequest request, ServerCallContext context)
         {
             return Task.FromResult(courseManager.GetCourse(request));
-        }
-        public override async Task<Course> UpdateCourse(Course request, ServerCallContext context)
-        {
-            return await courseManager.UpdateCourseAsync(request);
-        }
-        public override async Task<Empty> RemoveCourse(CourseFilter request, ServerCallContext context)
-        {
-            await courseManager.DeleteCourseAsync(request);
-
-            return new Empty();
         }
     }
 }

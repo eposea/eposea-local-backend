@@ -25,26 +25,10 @@ namespace EposeaLocalBackend.Business.Managers
             return result;
         }
 
-        public Section GetSection(SectionFilter filter)
+        public Section GetSection(GetSectionRequest request)
         {
             var courses = sectionRepository.GetAll();
-            return courses.FirstOrDefault(course => course.Id == filter.Id);
-        }
-
-
-        public async Task DeleteSectionAsync(SectionFilter filter)
-        {
-            var courseToDelete = GetSection(filter);
-
-            await sectionRepository.DeleteAsync(courseToDelete);
-        }
-
-
-        public async Task<Section> UpdateSectionAsync(Section course)
-        {
-            var result = await sectionRepository.UpdateAsync(course);
-
-            return result;
+            return courses.FirstOrDefault(course => course.Id == request.Id);
         }
     }
 }

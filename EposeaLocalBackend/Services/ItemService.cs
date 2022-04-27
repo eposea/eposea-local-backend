@@ -13,23 +13,11 @@ namespace EposeaLocalBackend
         {
             this.itemManager = itemManager;
         }
-        public override Task<Item> CreateItem(Item request, ServerCallContext context)
-        {
-            return itemManager.CreateItemAsync(request);
-        }
-        public override Task<Item> GetItem(ItemFilter request, ServerCallContext context)
+
+        public override Task<Item> GetItem(GetItemRequest request, ServerCallContext context)
         {
             return Task.FromResult(itemManager.GetItem(request));
         }
-        public override async Task<Item> UpdateItem(Item request, ServerCallContext context)
-        {
-            return await itemManager.UpdateItemAsync(request);
-        }
-        public override async Task<Empty> RemoveItem(ItemFilter request, ServerCallContext context)
-        {
-            await itemManager.DeleteItemAsync(request);
-
-            return new Empty();
-        }
+      
     }
 }
