@@ -42,17 +42,14 @@ namespace EposeaLocalBackend
             }
 
             app.UseRouting();
-            app.UseGrpcWeb();
+            app.UseGrpcWeb(new GrpcWebOptions { DefaultEnabled = true });
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGrpcService<CourseService>()
-                         .EnableGrpcWeb(); ;
+                endpoints.MapGrpcService<CourseService>();
 
-                endpoints.MapGrpcService<ItemService>()
-                         .EnableGrpcWeb();
+                endpoints.MapGrpcService<ItemService>();
 
-                endpoints.MapGrpcService<SectionService>()
-                        .EnableGrpcWeb();
+                endpoints.MapGrpcService<SectionService>();
 
                 if (env.IsDevelopment())
                 {
