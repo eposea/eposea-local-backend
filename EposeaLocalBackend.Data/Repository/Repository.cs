@@ -3,16 +3,19 @@ using EposeaLocalBackend.Data.Models;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
 
 namespace EposeaLocalBackend.Data.Repository
 {
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : class, new()
     {
         protected readonly ApplicationContext applicationContext;
+        protected readonly ILogger<Repository<TEntity>> logger;
 
-        public Repository(ApplicationContext applicationContext)
+        public Repository(ApplicationContext applicationContext, ILogger<Repository<TEntity>> logger)
         {
             this.applicationContext = applicationContext;
+            this.logger = logger;
         }
 
         public IQueryable<TEntity> GetAll()
@@ -23,7 +26,8 @@ namespace EposeaLocalBackend.Data.Repository
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.InnerException.Message);
+
+                logger.LogCritical(ex.InnerException.Message);
                 throw;
             }
         }
@@ -45,7 +49,7 @@ namespace EposeaLocalBackend.Data.Repository
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.InnerException.Message);
+                logger.LogCritical(ex.InnerException.Message);
                 throw;
             }
         }
@@ -66,6 +70,7 @@ namespace EposeaLocalBackend.Data.Repository
             }
             catch (Exception ex)
             {
+                logger.LogCritical(ex.InnerException.Message);
                 throw;
             }
         }
@@ -80,7 +85,7 @@ namespace EposeaLocalBackend.Data.Repository
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.InnerException.Message);
+                logger.LogCritical(ex.InnerException.Message);
                 throw;
             }
         }
