@@ -9,7 +9,7 @@
 		<Protobuf Include="backend-common\proto\item.proto" OutputDir="./Generated/Item" GrpcServices="Server" ProtoRoot="backend-common\proto\" />
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="Grpc.AspNetCore" Version="2.27.0" />
+		<PackageReference Include="Grpc.AspNetCore" Version="2.45.0" />
 		<PackageReference Include="Microsoft.Extensions.Logging" Version="6.0.0" />
 	</ItemGroup>
 </Project>
